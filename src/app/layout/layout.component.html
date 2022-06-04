@@ -1,0 +1,30 @@
+<p-toolbar>
+  <div class="p-toolbar-group-left">
+    <img
+      width="451"
+      height="107"
+      src="https://www.kitchendev.com/wp-content/uploads/2021/09/cropped-KitchenDEV-LOGO.png"
+      class="attachment-large size-large"
+      alt=""
+      loading="lazy"
+      srcset="
+        https://www.kitchendev.com/wp-content/uploads/2021/09/cropped-KitchenDEV-LOGO.png        451w,
+        https://www.kitchendev.com/wp-content/uploads/2021/09/cropped-KitchenDEV-LOGO-300x71.png 300w
+      "
+      sizes="(max-width: 451px) 100vw, 451px"
+    />
+  </div>
+  <div class="p-toolbar-group-right">
+    <button
+      pButton
+      pRipple
+      type="button"
+      (click)="openAddUserDrawer()"
+      icon="pi pi-plus"
+      label="Add User"
+      class="p-button-rounded"
+    ></button>
+  </div>
+</p-toolbar>
+
+<app-drawer-add-user *ngIf="drawerAddUser"> </app-drawer-add-user>
