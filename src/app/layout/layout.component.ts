@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,15 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent implements OnInit {
-  drawerAddUser = false;
+  addDrawer = false;
 
-  constructor() { }
+
+  constructor(http: HttpClient) {
+    http.get('https://jsonplaceholder.typicode.com/users').subscribe(data => {
+      console.log(data);
+    });
+  }
 
   openAddUserDrawer() {
-    this.drawerAddUser= !this.drawerAddUser;
+    this.addDrawer= !this.addDrawer;
   }
 
   ngOnInit(): void {
+
   }
 
 }

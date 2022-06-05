@@ -5,13 +5,16 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { ToolbarModule } from 'primeng/toolbar';
 import { DialogModule } from 'primeng/dialog';
-import { BrowserAnimationsModule }
-    from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {TableModule} from 'primeng/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { DrawerAddUserComponent } from './drawer-add-user/drawer-add-user.component';
+import { DrawerEditUserComponent } from './drawer-edit-user/drawer-edit-user/drawer-edit-user.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -19,6 +22,7 @@ import { DrawerAddUserComponent } from './drawer-add-user/drawer-add-user.compon
     AppComponent,
     LayoutComponent,
     DrawerAddUserComponent,
+    DrawerEditUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,9 @@ import { DrawerAddUserComponent } from './drawer-add-user/drawer-add-user.compon
     FormsModule,
     ToolbarModule,
     DialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
