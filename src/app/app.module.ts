@@ -6,7 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { ToolbarModule } from 'primeng/toolbar';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import {TableModule} from 'primeng/table';
+import { TableModule } from 'primeng/table';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,7 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
     DialogModule,
     BrowserAnimationsModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

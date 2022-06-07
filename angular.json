@@ -106,5 +106,7 @@
       }
     }
   },
-  "defaultProject": "kitchenDEV"
+  "cli": {
+    "analytics": false
+  }
 }

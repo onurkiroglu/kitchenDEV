@@ -6,6 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./drawer-add-user.component.css']
 })
 export class DrawerAddUserComponent implements OnInit {
+  value4: string;
 
   constructor() { }
 
