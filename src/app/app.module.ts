@@ -7,6 +7,7 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { TableModule } from 'primeng/table';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     TableModule,
     HttpClientModule,
-
+    ReactiveFormsModule,
+    FormsModule
 
   ],
   providers: [],

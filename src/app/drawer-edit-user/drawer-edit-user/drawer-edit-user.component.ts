@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DrawerEditUserComponent implements OnInit {
 
+  value4: string;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  editUser() {
+
+  }
+
+  hideEditDialog() {
+
+  }
+
+
 
 }

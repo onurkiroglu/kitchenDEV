@@ -19,7 +19,7 @@
       pButton
       pRipple
       type="button"
-      (click)="showDialog()"
+      (click)="showAddUserDialog()"
       icon="pi pi-plus"
       label="Add User"
       class="p-button-rounded"
@@ -35,6 +35,12 @@
   </app-drawer-add-user>
 </p-dialog>
 
+<p-dialog header="Edit User" position="right" [(visible)]="editDrawer" [style]="{width: '50vw'}">
+  <app-drawer-edit-user>
+
+  </app-drawer-edit-user>
+</p-dialog>
+
 
 <p-table [value]="users" responsiveLayout="scroll">
   <ng-template pTemplate="header">
@@ -44,19 +50,23 @@
           <th>Username</th>
           <th>Email</th>
           <th>Address</th>
+          <th>Phone</th>
+          <th>Website</th>
           <th>Company</th>
           <th></th>
       </tr>
   </ng-template>
   <ng-template pTemplate="body" let-user>
       <tr>
-          <td>{{user.id}}</td>
-          <td>{{user.name}}</td>
-          <td>{{user.username}}</td>
-          <td>{{user.email}}</td>
-          <td>{{user.address['street']}}</td>
-          <td>{{user.company['name']}}</td>
-          <td>
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.address['street'] }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.website }}</td>
+          <td>{{ user.company['name'] }}</td>
+          <td class="flex">
             <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" (click)="editUser(user)"></button>
             <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteUser(user)"></button>
         </td>
