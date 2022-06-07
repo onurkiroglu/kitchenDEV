@@ -17,6 +17,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { DrawerAddUserComponent } from './drawer-add-user/drawer-add-user.component';
 import { DrawerEditUserComponent } from './drawer-edit-user/drawer-edit-user/drawer-edit-user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './service/user.service';
 
 
 
@@ -42,7 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule
 
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

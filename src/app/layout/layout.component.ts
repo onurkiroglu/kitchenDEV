@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-layout',
@@ -10,27 +11,27 @@ export class LayoutComponent implements OnInit {
   addDrawer = false;
   editDrawer = false;
   users: any[];
-  url = 'https://jsonplaceholder.typicode.com/users';
 
-  constructor(private http: HttpClient) {
+
+  constructor(private service: UserService) {
   }
 
   ngOnInit(): void {
-    this.http.get(this.url).subscribe(response => {
+    this.service.getUsers().subscribe(response => {
       this.users = response as any[];
     });
   }
 
-  showAddUserDialog() {
+  showAddUserDrawer() {
     this.addDrawer = true;
   }
 
-  editUser(user) {
+  showEditUserDrawer(user) {
     this.editDrawer = true;
   }
 
   deleteUser(user) {
-    this.http.delete(this.url + '/' + user.id).subscribe(response => {
+    this.service.deleteUser(user.id).subscribe(response => {
       let index = this.users.indexOf(user);
       this.users.splice(index, 1);
     });

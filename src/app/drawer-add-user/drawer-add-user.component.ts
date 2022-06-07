@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UserService } from '../service/user.service';
 @Component({
   selector: 'app-drawer-add-user',
   templateUrl: './drawer-add-user.component.html',
@@ -7,11 +8,13 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class DrawerAddUserComponent implements OnInit {
   userForm: FormGroup;
+  user: any;
+  users: any[];
   value4: string;
   userDialog: boolean;
   submitted: boolean;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private service: UserService) { }
 
   ngOnInit(): void {
     this.userForm = this.formBuilder.group({
@@ -28,13 +31,15 @@ export class DrawerAddUserComponent implements OnInit {
 
   hideDialog() {
     this.userDialog = false;
-    this.submitted = false;
-    console.log('kapatıldı')
   }
 
-  addUser() {
-    console.log(this.userForm.value);
-
+  addUser(user) {
+    this.submitted = true;
+    this.service.addUser(this.userForm.value).subscribe(response => {
+      user['id'] = response['id'];
+      this.users.splice(0, 0, user);
+    });
+    this.userDialog = false;
 }
 
 }
