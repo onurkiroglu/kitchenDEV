@@ -1,1 +1,59 @@
-<p>editDrawer works</p>
+<form [formGroup]="formGroup">
+  <div class="row p-fluid">
+    <div class="field">
+      <label for="name" class="block"
+        >Fullname
+        </label
+      >
+      <input id="name" type="text" pInputText formControlName="name" />
+      <div class="field">
+        <label for="username" class="block"
+          >Username
+          </label
+        >
+        <input
+          id="username"
+          type="text"
+          pInputText
+          formControlName="username"
+        />
+      </div>
+      <div class="field">
+        <label for="email" class="block"
+          >Email
+          </label
+        >
+        <input id="email" type="email" pInputText formControlName="email" />
+      </div>
+      <div class="field">
+        <label for="address" class="block"
+          >Address
+          </label
+        >
+        <input id="address" type="text" pInputText formControlName="address" />
+      </div>
+      <div class="field">
+        <label for="phone" class="block"
+          >Phone
+          </label
+        >
+        <input id="phone" type="number" pInputText formControlName="phone" />
+      </div>
+      <div class="field">
+        <label for="website" class="block"
+          >Website
+          </label
+        >
+        <input id="website" type="text" pInputText formControlName="website" />
+      </div>
+      <div class="field">
+        <label for="company" class="block"
+          >Company
+          </label
+        >
+        <input id="company" type="text" pInputText formControlName="company" />
+      </div>
+    </div>
+  </div>
+
+</form>
