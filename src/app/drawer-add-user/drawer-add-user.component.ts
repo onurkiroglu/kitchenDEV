@@ -8,8 +8,9 @@ import { UserService } from '../service/user.service';
 })
 export class DrawerAddUserComponent implements OnInit {
   formGroup: FormGroup;
-  userDialog: boolean;
   submitted: boolean;
+  userDialog: boolean;
+
 
   constructor(private fb: FormBuilder, private service: UserService) {}
 
@@ -17,8 +18,8 @@ export class DrawerAddUserComponent implements OnInit {
     this.loadForm();
   }
 
-  hideDialog() {
-    this.userDialog = false;
+  onClear() {
+    this.formGroup.reset();
   }
 
   addUser() {
@@ -38,6 +39,7 @@ export class DrawerAddUserComponent implements OnInit {
 
   onSubmit() {
     console.log(this.formGroup.value);
+    this.formGroup.reset();
   }
 
 }

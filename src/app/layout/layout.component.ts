@@ -26,6 +26,10 @@ export class LayoutComponent implements OnInit {
     this.addDrawer = true;
   }
 
+  closeAddUserDrawer() {
+    this.addDrawer = false;
+  }
+
   showEditUserDrawer(user) {
     this.editDrawer = true;
   }

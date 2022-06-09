@@ -62,10 +62,18 @@
           <td>{{ user.name }}</td>
           <td>{{ user.username }}</td>
           <td>{{ user.email }}</td>
-          <td>{{ user.address['street'] }}</td>
+          <td pTooltip="{{user.address['street']}}
+            {{user.address['suite']}}
+            {{user.address['city']}}
+            {{user.address['zipcode']}}
+            {{user.address['geo']['lat']}}
+            {{user.address['geo']['lng']}}" tooltipPosition="top">{{ user.address['street'] }}</td>
           <td>{{ user.phone }}</td>
           <td>{{ user.website }}</td>
-          <td>{{ user.company['name'] }}</td>
+          <td pTooltip="{{user.company['name']}}
+          {{user.company['catchPhrase']}}
+          {{user.company['bs']}}"
+          tooltipPosition="top">{{ user.company['name'] }}</td>
           <td class="flex">
             <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" (click)="showEditUserDrawer(user)"></button>
             <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteUser(user)"></button>

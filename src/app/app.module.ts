@@ -15,6 +15,7 @@ import { DrawerAddUserComponent } from './drawer-add-user/drawer-add-user.compon
 import { DrawerEditUserComponent } from './drawer-edit-user/drawer-edit-user/drawer-edit-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './service/user.service';
+import {TooltipModule} from 'primeng/tooltip';
 
 
 
@@ -37,7 +38,8 @@ import { UserService } from './service/user.service';
     TableModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    TooltipModule
 
   ],
   providers: [UserService],
