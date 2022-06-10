@@ -13,6 +13,10 @@ export class UserService {
     return this.http.get(this.url)
   }
 
+  getUserById(id) {
+    return this.http.get(this.url + '/' + id);
+  }
+
   addUser(user) {
     return this.http.post(this.url, user);
   }

@@ -59,7 +59,14 @@
         <label for="phone" class="block"
           >Phone <span class="text-red-500">*</span></label
         >
-        <input id="phone" type="number" pInputText formControlName="phone" />
+        <p-inputNumber
+          mode="decimal"
+          inputId="phone"
+          [useGrouping]="false"
+          formControlName="phone"
+          [allowEmpty]="true"
+        >
+        </p-inputNumber>
         <span
           *ngIf="
             formGroup.get('phone').invalid && formGroup.get('phone').touched

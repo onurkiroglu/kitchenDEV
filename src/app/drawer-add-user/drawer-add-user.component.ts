@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { UserService } from '../service/user.service';
 @Component({
@@ -10,8 +10,10 @@ export class DrawerAddUserComponent implements OnInit {
   formGroup: FormGroup;
   submitted: boolean;
   userDialog: boolean;
+  newUser: any;
 
-
+  @Output() drawerClosed = new EventEmitter<boolean>();
+  @Output() submittedForm = new EventEmitter<object>();
   constructor(private fb: FormBuilder, private service: UserService) {}
 
   ngOnInit(): void {
@@ -38,7 +40,11 @@ export class DrawerAddUserComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.formGroup.value);
+    this.newUser = Object.assign({}, this.formGroup.value);
+    this.service.addUser(this.newUser).subscribe(response => {
+      this.submittedForm.emit(this.newUser);
+      this.drawerClosed.emit(false);
+    });
     this.formGroup.reset();
   }
 
