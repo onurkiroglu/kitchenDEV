@@ -1,10 +1,11 @@
-# KitchenDEV CRUD Task
-<br>
-<br>
+## KitchenDEV CRUD Task
+<br/>
 High-level Design
-<br>
+<br/>
 Below is the high-level structure of the application.
-<br>
+<br/>
+
+´
 ./src
 ├── app
 │   ├── app # root app component
@@ -53,3 +54,4 @@ Below is the high-level structure of the application.
 │   └── environment.ts
 │
 └── ...
+´
