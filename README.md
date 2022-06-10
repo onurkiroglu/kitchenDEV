@@ -1,11 +1,36 @@
-## KitchenDEV CRUD Task
-<br/>
-High-level Design
-<br/>
-Below is the high-level structure of the application.
-<br/>
+# KitchenDEV CRUD Task
+## Getting Started
+### Prerequisites
 
-´
+- [Node.js](https://nodejs.org/en/)
+- [Angular CLI](https://angular.io/cli)
+
+### Setup & Usage
+
+- Clone this repository: `git clone https://github.com/onurkiroglu/kitchenDEV.git`
+- Install dependencies: `npm install`
+- Serve the Angular app: `npm start`
+- Open your browser at: `http://localhost:4200`
+
+### Other Features
+
+- Lazy loading of Angular modules
+- API requests with `@ngrx/effects`
+- Responsive design
+- In-memory Web API
+
+## Tech Stack
+
+- [Angular](https://angular.io/)
+- [NgRX](https://ngrx.io/) - @ngrx/{store,effects,component}
+- [PrimeNg](https://www.primefaces.org/)
+- [PrimeFlex](https://www.primefaces.org/)
+
+## High-level Design
+
+Below is the high-level structure of the application.
+
+```sh
 ./src
 ├── app
 │   ├── app # root app component
@@ -47,11 +72,12 @@ Below is the high-level structure of the application.
 │
 │
 ├── assets
-│   ├── ...
+│   └── ...
 │
 ├── environments
 │   ├── environment.prod.ts
 │   └── environment.ts
 │
 └── ...
-´
+```
+
