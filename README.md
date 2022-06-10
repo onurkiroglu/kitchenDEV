@@ -12,17 +12,9 @@
 - Serve the Angular app: `npm start`
 - Open your browser at: `http://localhost:4200`
 
-### Other Features
-
-- Lazy loading of Angular modules
-- API requests with `@ngrx/effects`
-- Responsive design
-- In-memory Web API
-
 ## Tech Stack
 
 - [Angular](https://angular.io/)
-- [NgRX](https://ngrx.io/) - @ngrx/{store,effects,component}
 - [PrimeNg](https://www.primefaces.org/)
 - [PrimeFlex](https://www.primefaces.org/)
 
