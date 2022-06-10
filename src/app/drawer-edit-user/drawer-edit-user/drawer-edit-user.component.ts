@@ -27,4 +27,8 @@ export class DrawerEditUserComponent implements OnInit {
     });
   }
 
+  save() {
+    console.log(this.formGroup.value);
+  }
+
 }

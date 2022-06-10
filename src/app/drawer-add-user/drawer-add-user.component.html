@@ -5,7 +5,11 @@
         >Fullname <span class="text-red-500">*</span></label
       >
       <input id="name" type="text" pInputText formControlName="name" />
-      <span *ngIf="formGroup.get('name').invalid && formGroup.get('name').touched" class="border-red-500 text-red-500">valid name is required</span>
+      <span
+        *ngIf="formGroup.get('name').invalid && formGroup.get('name').touched"
+        class="border-red-500 text-red-500"
+        >valid name is required</span
+      >
       <div class="field">
         <label for="username" class="block"
           >Username <span class="text-red-500">*</span></label
@@ -16,66 +20,101 @@
           pInputText
           formControlName="username"
         />
-        <span *ngIf="formGroup.get('username').invalid && formGroup.get('username').touched" class="border-red-500 text-red-500">valid username is required</span>
+        <span
+          *ngIf="
+            formGroup.get('username').invalid &&
+            formGroup.get('username').touched
+          "
+          class="border-red-500 text-red-500"
+          >valid username is required</span
+        >
       </div>
       <div class="field">
         <label for="email" class="block"
           >Email <span class="text-red-500">*</span></label
         >
         <input id="email" type="email" pInputText formControlName="email" />
-        <span *ngIf="formGroup.get('email').invalid && formGroup.get('email').touched" class="border-red-500 text-red-500">valid email is required</span>
+        <span
+          *ngIf="
+            formGroup.get('email').invalid && formGroup.get('email').touched
+          "
+          class="border-red-500 text-red-500"
+          >valid email is required</span
+        >
       </div>
       <div class="field">
         <label for="address" class="block"
           >Address <span class="text-red-500">*</span></label
         >
         <input id="address" type="text" pInputText formControlName="address" />
-        <span *ngIf="formGroup.get('address').invalid && formGroup.get('address').touched" class="border-red-500 text-red-500">valid address is required</span>
+        <span
+          *ngIf="
+            formGroup.get('address').invalid && formGroup.get('address').touched
+          "
+          class="border-red-500 text-red-500"
+          >valid address is required</span
+        >
       </div>
       <div class="field">
         <label for="phone" class="block"
           >Phone <span class="text-red-500">*</span></label
         >
         <input id="phone" type="number" pInputText formControlName="phone" />
-        <span *ngIf="formGroup.get('phone').invalid && formGroup.get('phone').touched" class="border-red-500 text-red-500">valid phone number is required</span>
+        <span
+          *ngIf="
+            formGroup.get('phone').invalid && formGroup.get('phone').touched
+          "
+          class="border-red-500 text-red-500"
+          >valid phone number is required</span
+        >
       </div>
       <div class="field">
         <label for="website" class="block"
           >Website <span class="text-red-500">*</span></label
         >
         <input id="website" type="text" pInputText formControlName="website" />
-        <span *ngIf="formGroup.get('website').invalid && formGroup.get('website').touched" class="border-red-500 text-red-500">valid website is required</span>
+        <span
+          *ngIf="
+            formGroup.get('website').invalid && formGroup.get('website').touched
+          "
+          class="border-red-500 text-red-500"
+          >valid website is required</span
+        >
       </div>
       <div class="field">
         <label for="company" class="block"
           >Company <span class="text-red-500">*</span></label
         >
         <input id="company" type="text" pInputText formControlName="company" />
-        <span *ngIf="formGroup.get('company').invalid && formGroup.get('company').touched" class="border-red-500 text-red-500">valid company name is required</span>
+        <span
+          *ngIf="
+            formGroup.get('company').invalid && formGroup.get('company').touched
+          "
+          class="border-red-500 text-red-500"
+          >valid company name is required</span
+        >
       </div>
     </div>
   </div>
 
-  <div class="card">
-    <div class="inline-flex card-container justify-content-end">
-      <button
-        [disabled]="formGroup.invalid"
-        pButton
-        pRipple
-        label="Save"
-        icon="pi pi-check"
-        class="p-button-text flex-1 h-4rem"
-        type="submit"
-      ></button>
-      <button
-        pButton
-        pRipple
-        label="Cancel"
-        icon="pi pi-times"
-        class="p-button-text flex-1 h-4rem"
-        (click)="onClear()"
-        type="button"
-      ></button>
-    </div>
+  <div class="inline">
+    <button
+      [disabled]="formGroup.invalid"
+      pButton
+      pRipple
+      label="Save"
+      icon="pi pi-check"
+      class="p-button-text flex-1 h-4rem"
+      type="submit"
+    ></button>
+    <button
+      pButton
+      pRipple
+      label="Cancel"
+      icon="pi pi-times"
+      class="p-button-text flex-1 h-4rem"
+      (click)="onClear()"
+      type="button"
+    ></button>
   </div>
 </form>
