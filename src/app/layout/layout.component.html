@@ -29,14 +29,14 @@
 <br>
 <br>
 
-<p-dialog header="Add User" position="right" [(visible)]="addDrawer" [style]="{width: '50vw'}">
+<p-dialog header="Add User" position="right" [(visible)]="addDrawer" [style]="{width: '30vw'}">
   <app-drawer-add-user
   (drawerClosed)="changeDrawerAddUser($event)"
   (submittedForm)="refreshAfterAddUserSubmit($event)">
   </app-drawer-add-user>
 </p-dialog>
 
-<p-dialog header="Edit User" position="right" [(visible)]="editDrawer" [style]="{width: '50vw'}">
+<p-dialog header="Edit User" position="right" [(visible)]="editDrawer" [style]="{width: '30vw'}">
   <app-drawer-edit-user
   (drawerClosed)="changeDrawerEditUser($event)"
   (submittedForm)="refreshAfterEditUserSubmit($event)"
