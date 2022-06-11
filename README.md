@@ -32,8 +32,7 @@ Below is the high-level structure of the application.
 │   │   ├── app.component.html
 │   │   ├── app.component.css
 │   │   ├── app.component.ts
-│   │   ├── app.component.ts
-│   │   ├── app.component.css
+│   │   ├── app.component.spec.ts
 │   │   ├── app-routing.module.ts
 │   │   └── app.module.ts
 │   │
