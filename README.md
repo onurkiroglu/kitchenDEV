@@ -1,4 +1,7 @@
 # KitchenDEV CRUD Task
+https://user-images.githubusercontent.com/81585721/173164656-2ebbba7d-13ee-409d-90f6-27d02ebf475d.mp4
+
+
 ## Getting Started
 ### Prerequisites
 
@@ -29,8 +32,7 @@ Below is the high-level structure of the application.
 │   │   ├── app.component.html
 │   │   ├── app.component.css
 │   │   ├── app.component.ts
-│   │   ├── app.component.ts
-│   │   ├── app.component.css
+│   │   ├── app.component.spec.ts
 │   │   ├── app-routing.module.ts
 │   │   └── app.module.ts
 │   │
@@ -54,14 +56,9 @@ Below is the high-level structure of the application.
 │   │   └── drawer-edit-user.component.css
 │   │
 │   │
-│   ├── service # includes http calls
-│   │   └── service.ts
-│   │
-│   └── features # all features of application
-│       ├── about
-│       ├── home
-│       └── secured-feat
-│
+│   └── service # includes http calls
+│       └── service.ts
+│   
 │
 ├── assets
 │   └── ...
