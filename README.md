@@ -56,14 +56,9 @@ Below is the high-level structure of the application.
 │   │   └── drawer-edit-user.component.css
 │   │
 │   │
-│   ├── service # includes http calls
-│   │   └── service.ts
-│   │
-│   └── features # all features of application
-│       ├── about
-│       ├── home
-│       └── secured-feat
-│
+│   └── service # includes http calls
+│       └── service.ts
+│   
 │
 ├── assets
 │   └── ...
